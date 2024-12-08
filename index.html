@@ -28,6 +28,7 @@
     border: 1px solid #ccc;
     margin: 20px;
     animation: slideUp 1s ease-in-out forwards;
+    font-weight: bold;
   }
 
   .task {
@@ -36,18 +37,12 @@
     border: 1px solid #ccc;
     margin: 20px;
     animation: slideUp 1s ease-in-out forwards;
-    color: #ffff00; /* Yellow color */
+    font-weight: normal;
   }
 
-  @keyframes slideUp {
-    0% {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .yellow {
+    color: #ffff00; /* Yellow color */
+    font-weight: bold;
   }
 
   #reward {
@@ -57,7 +52,7 @@
     margin: 20px;
     display: none;
     animation: slideUp 1s ease-in-out forwards;
-    color: #ffff00; /* Yellow color */
+    font-weight: bold;
   }
 
 </style>

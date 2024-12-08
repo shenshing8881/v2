@@ -8,7 +8,8 @@
 <title>Task App</title>
 <style>
   body {
-    background-color: #ff007f; /* Vibrant background color */
+    background-image: url('ali.jpeg');
+    background-size: cover;
     color: #ffffff;
   }
 
@@ -18,6 +19,14 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+  }
+
+  #welcome {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    animation: slideUp 1s ease-in-out forwards;
   }
 
   .task {
@@ -40,7 +49,6 @@
   }
 
   #reward {
-    color: #ffffff;
     text-align: center;
     padding: 20px;
     border: 1px solid #ccc;
@@ -52,6 +60,10 @@
 </head>
 <body>
 <div class="container">
+  <div id="welcome">
+    Hello Manyakol! Click Start muna sa tasks para ma-unlock si Aliah 💕
+  </div>
+
   <div id="task1" class="task">
     Task(1/2) Click <a href="https://t.me/DuckChain_bot/quack?startapp=9R8bks4z" target="_blank">Start</a>
   </div>
@@ -61,7 +73,7 @@
   </div>
 
   <div id="reward">
-    Congrats Manyakol! You have completed both tasks and unlocked the Leaks! <a href="https://t.me/+fKUKVQE7YH5lYWVl" target="_blank">Pasok ka dito</a> Enjoy!💕
+    Congrats Manyakol! You have completed both tasks and unlocked the Leaks! <a href="https://t.me/+fKUKVQE7YH5lYWVl" target="_blank">Pasok ka dito</a> Enjoy! 💕
   </div>
 </div>
 
@@ -85,6 +97,10 @@
   setTimeout(function() {
     document.getElementById('task1').style.display = 'block';
   }, 10000);
+
+  document.getElementById('task1').addEventListener('click', function() {
+    showTask2();
+  });
 
   setTimeout(function() {
     showTask2();

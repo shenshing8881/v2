@@ -57,6 +57,9 @@
     display: none;
     animation: slideUp 1s ease-in-out forwards;
     font-weight: bold;
+    background-image: url('ali.jpg'); /* Background image specific to task reward */
+    background-size: cover;
+    color: #ffff00; /* Yellow color */
   }
 
 </style>
@@ -86,7 +89,7 @@
     setTimeout(function() {
       document.getElementById('task1').style.display = 'none';
       document.getElementById('task2').style.display = 'block';
-      document.body.style.backgroundPosition = "left top";
+      document.body.style.backgroundPosition = 'left top';
     }, 3000);
   }
 
@@ -95,7 +98,7 @@
     setTimeout(function() {
       document.getElementById('task2').style.display = 'none';
       document.getElementById('reward').style.display = 'block';
-      document.body.style.backgroundPosition = "right top";
+      document.body.style.backgroundPosition = 'right top';
     }, 3000);
   }
 

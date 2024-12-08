@@ -1,65 +1,69 @@
 
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <style>
-        .task-bar {
-            background-color: #f7f7f7;
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-            width: 50%;
-            margin: 0 auto;
-            position: relative;
-        }
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task App</title>
+<style>
+  #task {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    animation: slideUp 1s ease-in-out forwards;
+  }
 
-        .task {
-            display: none;
-            transition: opacity 1s;
-        }
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-        .reward {
-            display: none;
-            text-align: center;
-            width: 50%;
-            margin: 0 auto;
-            background: url('flowery_background.jpg');
-            background-size: cover;
-            padding: 20px;
-            border-radius: 10px;
-        }
-    </style>
+  #reward {
+    background-image: url('flowery_background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    display: none;
+    animation: slideUp 1s ease-in-out forwards;
+  }
+</style>
 </head>
-
 <body>
-    <div class="task-bar">
-        <div class="task task1" style="display: block;">Task 1: Complete task 1</div>
-        <div class="task task2">Task 2: Complete task 2</div>
-        <div class="reward">Congratulations! You've completed both tasks and earned a reward!</div>
-    </div>
 
-    <script>
-        const task1 = document.querySelector('.task1');
-        const task2 = document.querySelector('.task2');
-        const reward = document.querySelector('.reward');
+<div id="task" class="task">
+  Task 1: Click <a href="https://t.me/DuckChain_bot/quack?startapp=9R8bks4z" target="_blank">here</a> to complete the first task.
+</div>
 
-        task1.addEventListener('click', () => {
-            task1.style.opacity = 0;
-            setTimeout(() => {
-                task1.style.display = 'none';
-                task2.style.display = 'block';
-            }, 1000);
-        });
+<div id="reward">
+  Congratulations! You have completed both tasks and unlocked the reward content. Click <a href="https://t.me/+fKUKVQE7YH5lYWVl" target="_blank">here</a> to claim your reward.
+</div>
 
-        task2.addEventListener('click', () => {
-            task2.style.opacity = 0;
-            setTimeout(() => {
-                task2.style.display = 'none';
-                reward.style.display = 'block';
-            }, 1000);
-        });
-    </script>
+<script>
+  function showReward() {
+    document.getElementById('task').style.display = 'none';
+    document.getElementById('reward').style.display = 'block';
+  }
+  
+  setTimeout(function() {
+    document.getElementById('task').style.opacity = 0;
+    setTimeout(function() {
+        document.getElementById('task').style.display = 'none';
+        document.getElementById('reward').style.display = 'block';
+    }, 1000);
+  }, 10000);
+</script>
+
 </body>
-
 </html>

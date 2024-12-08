@@ -8,6 +8,7 @@
 <title>Task App</title>
 <style>
   body {
+    background-image: url('qwe8.jpg');
     background-size: cover;
     background-position: right;
     color: #000000;
@@ -38,6 +39,7 @@
     margin: 20px;
     animation: slideUp 1s ease-in-out forwards;
     font-weight: normal;
+    color: #ffff00; /* Yellow color */
   }
 
   .yellow {
@@ -59,7 +61,7 @@
 </head>
 <body>
 <div class="container">
-  <div id="welcome">
+  <div id="welcome" class="task">
     Hello Manyakol! Task ka muna para ma-unlock si Aliah 💕 FREE po ito.
   </div>
 
@@ -71,8 +73,8 @@
     <span class="yellow">Task 2: Share <a href="https://telegram.me/share/url?url=https://t.me/AsiaViralsXX_bot&text=Enjoy latest Premium leaks for FREE!❤️" target="_blank">this</a> in ANY Group at least ONCE</span>
   </div>
 
-  <div id="reward">
-    Congrats Manyakol! You have completed both tasks and unlocked the leaks! <a href="https://t.me/+fKUKVQE7YH5lYWVl" target="_blank">Pasok ka dito</a>and Enjoy! 💕
+  <div id="reward" class="task" style="display: none;">
+    Congrats Manyakol! You have completed both tasks and unlocked the leaks! <a href="https://t.me/+fKUKVQE7YH5lYWVl" target="_blank"><span class="yellow">Pasok ka dito</span></a>and Enjoy! 💕
   </div>
 </div>
 
@@ -82,7 +84,7 @@
     setTimeout(function() {
       document.getElementById('task1').style.display = 'none';
       document.getElementById('task2').style.display = 'block';
-      document.body.style.backgroundImage = "url('ieie8.jpg')";
+      document.body.style.backgroundPosition = "left top";
     }, 3000);
   }
 
@@ -91,7 +93,7 @@
     setTimeout(function() {
       document.getElementById('task2').style.display = 'none';
       document.getElementById('reward').style.display = 'block';
-      document.body.style.backgroundImage = "url('iei.jpg')";
+      document.body.style.backgroundPosition = "right top";
     }, 3000);
   }
 

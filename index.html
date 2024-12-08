@@ -8,10 +8,10 @@
 <title>Task App</title>
 <style>
   body {
-    background-image: url('qwe8.jpg');
     background-size: cover;
     background-position: right;
     color: #000000;
+    transition: background-image 2s ease;
   }
 
   .container {
@@ -82,6 +82,7 @@
     setTimeout(function() {
       document.getElementById('task1').style.display = 'none';
       document.getElementById('task2').style.display = 'block';
+      document.body.style.backgroundImage = "url('ieie8.jpg')";
     }, 3000);
   }
 
@@ -90,6 +91,7 @@
     setTimeout(function() {
       document.getElementById('task2').style.display = 'none';
       document.getElementById('reward').style.display = 'block';
+      document.body.style.backgroundImage = "url('iei.jpg')";
     }, 3000);
   }
 
@@ -112,3 +114,6 @@
 
 </body>
 </html>
+```
+
+Now, the background image will slowly change to "ieie8.jpg" after Task 1 is completed, and it will change to "iei.jpg" after Task 2 is completed. Let me know if you need further assistance.

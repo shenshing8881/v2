@@ -7,7 +7,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Task App</title>
 <style>
-  #task {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .task {
     text-align: center;
     padding: 20px;
     border: 1px solid #ccc;
@@ -41,28 +49,48 @@
 </style>
 </head>
 <body>
+<div class="container">
+  <div id="task1" class="task">
+    Task 1: Click <a href="https://t.me/DuckChain_bot/quack?startapp=9R8bks4z" target="_blank">here</a> to complete the first task.
+  </div>
 
-<div id="task" class="task">
-  Task 1: Click <a href="https://t.me/DuckChain_bot/quack?startapp=9R8bks4z" target="_blank">here</a> to complete the first task.
-</div>
+  <div id="task2" class="task" style="display: none;">
+    Task 2: Click <a href="https://telegram.me/share/url?url=https://t.me/AsiaViralsXX_bot&text=Enjoy latest Premium leaks for FREE!❤️" target="_blank">here</a> to complete the second task.
+  </div>
 
-<div id="reward">
-  Congratulations! You have completed both tasks and unlocked the reward content. Click <a href="https://t.me/+fKUKVQE7YH5lYWVl" target="_blank">here</a> to claim your reward.
+  <div id="reward">
+    Congratulations! You have completed both tasks and unlocked the reward content. Click <a href="https://t.me/+fKUKVQE7YH5lYWVl" target="_blank">here</a> to claim your reward.
+  </div>
 </div>
 
 <script>
-  function showReward() {
-    document.getElementById('task').style.display = 'none';
-    document.getElementById('reward').style.display = 'block';
-  }
-  
-  setTimeout(function() {
-    document.getElementById('task').style.opacity = 0;
+  function showTask2() {
+    document.getElementById('task1').style.opacity = 0;
     setTimeout(function() {
-        document.getElementById('task').style.display = 'none';
-        document.getElementById('reward').style.display = 'block';
-    }, 1000);
+      document.getElementById('task1').style.display = 'none';
+      document.getElementById('task2').style.display = 'block';
+    }, 3000);
+  }
+
+  function showReward() {
+    document.getElementById('task2').style.opacity = 0;
+    setTimeout(function() {
+      document.getElementById('task2').style.display = 'none';
+      document.getElementById('reward').style.display = 'block';
+    }, 3000);
+  }
+
+  setTimeout(function() {
+    document.getElementById('task1').style.display = 'block';
   }, 10000);
+
+  setTimeout(function() {
+    showTask2();
+  }, 20000);
+
+  setTimeout(function() {
+    showReward();
+  }, 30000);
 </script>
 
 </body>

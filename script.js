@@ -18,16 +18,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tasks.forEach((taskId, index) => {
         const task = document.getElementById(taskId);
-        const button = document.getElementById('showTask' + (index + 1));
 
-        button.addEventListener('click', function() {
+        // Initially hide all tasks
+        task.style.display = 'none';
+
+        // Show first task
+        if (index === 0) {
+            task.style.display = 'block';
             task.classList.add('show');
-            button.style.display = 'none'; // Hide button after task is shown
+        }
 
-            if (index === tasks.length - 1) { // If it's the last task
+        task.querySelector('a').addEventListener('click', function() {
+            // Hide the current task after interaction
+            task.style.display = 'none';
+            task.classList.remove('show');
+
+            // Show the next task after a delay
+            if (index + 1 < tasks.length) {
                 setTimeout(() => {
+                    document.getElementById(tasks[index + 1]).style.display = 'block';
+                    document.getElementById(tasks[index + 1]).classList.add('show');
+                }, 1000); // 1 second delay before showing next task
+            } else {
+                // If it's the last task, show reward after a delay
+                setTimeout(() => {
+                    reward.style.display = 'block';
                     reward.classList.add('show');
-                }, 10000); // Show reward after 10 seconds
+                }, 1000); // 1 second delay before showing reward
             }
         });
     });

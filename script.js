@@ -52,3 +52,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initially hide reward
     reward.style.display = 'none';
 });
+
+function completeTask() {
+  // Assuming you have a div with class 'task' for each task
+  var task = document.querySelector('.task');
+  task.style.display = 'none'; // Hide the task
+
+  // Create and append heart elements
+  for(var i = 0; i < 10; i++) {
+    var heart = document.createElement('div');
+    heart.classList.add('heart');
+    document.body.appendChild(heart);
+    // You might want to position the heart at the task's location
+    heart.style.top = task.offsetTop + 'px';
+    heart.style.left = task.offsetLeft + 'px';
+  }
+
+  // Show the next task or a message
+  var nextTask = document.querySelector('.next-task');
+  nextTask.style.display = 'block'; // Show the next task
+}

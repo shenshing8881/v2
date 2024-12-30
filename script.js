@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     reward.style.display = 'block';
                     reward.classList.add('show');
-                }, 1000); // 1 second delay before showing reward
+                }, 1000);
             }
         });
     });
